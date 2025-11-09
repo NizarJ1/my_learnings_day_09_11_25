@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mes objets tech</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Mes objets tech</h1>
+    <div class="container">
+        <!--Iphone-->
+        <div class="device" onclick="toggleSpecs(this)" data-price="1449.00">
+            <img src="images/iphone.jpg" alt="iPhone 16 Pro">
+            <div class="specs">
+                <h3>iPhone 16 Pro</h3>
+                <ul>
+                    <li>Stockage : 128 Go</li>
+                    <li>Couleur : Black siderale</li>
+                    <li>Ecran : 6.2" OLED ProMotion</li>
+                    <li>Puce : A18 Pro</li>
+                    <li>Prix : 1449.00 $CAD</li>
+                </ul>
+            </div>
+        </div>
+        <!--Ipad-->
+        <div class="device" onclick="toggleSpecs(this)" data-price="1000.00">
+            <img src="images/ipad.jpg" alt="iPad 13' 3rd">
+            <div class="specs">
+                <h3>iPad 13" 3rd Gen</h3>
+                <ul>
+                    <li>Staockage : 258 Go</li>
+                    <li>Couleur : Black siderale</li>
+                    <li>Processeur : M2</li>
+                    <li>Ecran : 13" Liquid Retina</li>
+                    <li>Prix : 1000.00 $CAD</li>
+                </ul>
+            </div>
+        </div>
+        <!--MacBook-->
+        <div class="device" onclick="toggleSpecs(this)" data-price="2767.00">
+            <img src="images/mac.jpg" alt="MacBook M5">
+            <div class="specs">
+                <h3>MacBook M5</h3>
+                <ul>
+                    <li>Puce : Apple M5</li>
+                    <li>RAM : 24 Go</li>
+                    <li>Stockage : 512 Go SSD</li>
+                    <li>Ecran : 14.2" Mini-LED</li>
+                    <li>Prix : 2767.00 $CAD</li>
+                </ul>
+            </div>
+        </div>
+        <!--Airpods-->
+        <div class="device" onclick="toggleSpecs(this)" data-price="301.24">
+            <img src="images/airpods.jpg" alt="AirPods 4">
+            <div class="specs">
+                <h3>AiurPods 4</h3>
+                <ul>
+                    <li>ANC Amelioree</li>
+                    <li>Audio spatial dynamiuque</li>
+                    <li>Autonomie : 6h + boitier 24h</li>
+                    <li>Prix : 301.24 $CAD</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <h2 id="total">Total: 0 $CAD</h2>
+   <script>
+    function toggleSpecs(deviceDiv) {
+        const specs = deviceDiv.querySelector(".specs");
+        specs.style.display = specs.style.display === 'block' ? 'none' : 'block';
+    }
+
+    window.onload = function(){
+        let total = 0;
+        const devices = document.querySelectorAll('.device');
+        devices.forEach(device => {
+            const price = parseFloat(device.dataset.price);
+            if(!isNaN(price)){
+                total += price;
+            }
+        });
+        document.getElementById("total").innerText = "Total : " + total.toFixed(2) + " $CAD";
+    }
+</script>
+
+
+</body>
+</html>

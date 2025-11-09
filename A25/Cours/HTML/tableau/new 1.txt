@@ -1,0 +1,40 @@
+//<table> cree une table </table>
+//<tr> Definie une rangee </tr>
+//<th> defini une ligne déntrer </th>
+//<td> Definie une cellule </td>
+
+<html>
+	<head>
+		<title> Exemple d'un tableau de 4 lignes et 4 colonnes</title>
+	</head>
+	<body>
+		<h1 align="center"> exemple de tableau de 4 lignes et 4 colonnes</h1>
+		<table border="1" width="50%" height="50%">
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+	</body>
+</html>

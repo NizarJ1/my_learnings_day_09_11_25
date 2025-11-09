@@ -1,0 +1,62 @@
+<html>
+	<head>
+		<title>Mon premier formulaire d'inscription</title>
+	</head>
+	<body>
+		<h1 aligne="center">L'authentification</h1>
+		
+		<form  method ="get" action="inscription.php">
+			Nom: <input type="text" name="nom"/><br>
+			<br>
+			Prenom: <input type="text" name="prenom"/><br>
+			<br>
+			Date de naissance : 
+			jour:
+			<select name="jour">
+				<option>1</option>
+				<option>2</option>
+				<option>3</option>
+				<option>...</option>
+				<option>31</option>
+			</select>
+			Mois:
+			<select name="mois">
+				<option value="1">janvier</option>
+				<option value="2">fevrier</option>
+				<option value="3">mars</option>
+				<option>...</option>
+				<option value="12">decembre</option>
+			</select>
+			annees:
+			<select name="annees">
+				<option>2001</option>
+				<option>2002</option>
+				<option>2003</option>
+				<option>...</option>
+				<option>2010</option>
+			</select><br>
+			
+			votre comentaire:<br>
+			<textarea name="commentaire" rows="10" cols="50">
+				votre comentaire 
+			</textarea><br>
+			<br>
+			<h3 aligne="center">Bouton</h3>
+			Genre:<br>
+			Homme<input type="radio" name="genre" value="h"/>
+			femme<input type="radio" name="genre" value="F"/><br>
+			<br>
+			Vos Loisire: <br>
+			Foot<input type="checkbox" name="choix1" value="Foot"/><br>
+			JVDO<input type="checkbox" name="choix2" value="jeu video"/><br>
+			Voyage<input type="checkbox" name="choix3" value="Voyage"/><br>
+			Film<input type="checkbox" name="choix4" value="Films"/><br>
+			<br>
+			
+			<input type="submit" value="Envoyer"/>
+			<input type="button" value="Verifier"/>
+			<input type="reset" value="annuler"/>
+			
+		</form>
+	</body>
+</html>
